@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://cdn.tailwindcss.com"></script>
+
+		<title>Todo list</title>
+	</head>
+
+	<body class="pt-10 pb-20 px-40">
+		<header class="grid grid-rows-1 justify-center mb-5 w-full">
+			<h1 class="text-5xl">My To do list</h1>
+		</header>
+
+		<div id="loading-state" class="grid grid-rows-1 p-5 justify-center gap-10 hidden">
+			<p>Fetching data...</p>
+		</div>
+
+		<div id="todo-list" class="grid grid-cols-3 py-3 justify-center gap-4 none"></div>
+
+		<div id="pagination" class="grid grid-rows-1 grid-cols-3 justify-center mt-20">
+			<button id="previous-button" onclick="previous()" class="rounded-full text-blue-500">
+				< Previous
+			</button>
+
+			<div id="page-indicator" class="text-center"></div>
+
+			<button id="next-button" onclick="next()" class="rounded-full text-blue-500">
+				Next >
+			</button>
+		</div>
+	</body>
+
+	<script src="./index.js"></script>
+</html>
