@@ -18,7 +18,25 @@
 			<p>Fetching data...</p>
 		</div>
 
-		<div id="todo-list" class="grid grid-cols-3 py-3 justify-center gap-4 none"></div>
+		<div id="todo-wrapper">
+			<input
+				class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb2"
+				placeholder="Type your todo here.."
+				onchange="searchTodo(event)"
+			/>
+
+			<select
+				class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mt-2"
+				onchange="changePageLimit(event)"
+			>
+				<option value="10">10</option>
+				<option value="20">20</option>
+				<option value="30">30</option>
+				<option value="40">40</option>
+			</select>
+
+			<div id="todo-list" class="grid grid-cols-3 py-3 justify-center gap-4"></div>
+		</div>
 
 		<div id="pagination" class="grid grid-rows-1 grid-cols-3 justify-center mt-20">
 			<button id="previous-button" onclick="previous()" class="rounded-full text-blue-500">
